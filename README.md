@@ -8,10 +8,10 @@ A machine learning service that predicts diabetes progression risk to help nurse
 
 ```bash
 # Pull the latest version
-docker pull ghcr.io/bernard1425/group-be:v0.2
+docker pull ghcr.io/bernard1425/group-be:latest
 
 # Run the container
-docker run -p 8000:8000 ghcr.io/bernard1425/group-be:v0.2
+docker run -p 8000:8000 ghcr.io/bernard1425/group-be:latest
 ```
 
 ### API Usage
@@ -23,7 +23,7 @@ curl http://localhost:8000/health
 
 **Response:**
 ```json
-{"status": "ok", "model_version": "v0.2"}
+{"status": "ok", "model_version": "v0.1"}
 ```
 
 **Make Prediction:**
