@@ -8,10 +8,10 @@ A machine learning service that predicts diabetes progression risk to help nurse
 
 ```bash
 # Pull the latest version
-docker pull ghcr.io/YOUR_USERNAME/diabetes-clinic-triage:v0.2
+docker pull ghcr.io/bernard1425/group-be:v0.2
 
 # Run the container
-docker run -p 8000:8000 ghcr.io/YOUR_USERNAME/diabetes-clinic-triage:v0.2
+docker run -p 8000:8000 ghcr.io/bernard1425/group-be:v0.2
 ```
 
 ### API Usage
