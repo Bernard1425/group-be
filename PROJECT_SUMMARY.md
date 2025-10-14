@@ -1,53 +1,53 @@
 # Project Summary: Diabetes Clinic Triage System
 
-## ✅ Completed Implementation
+## Implementation Overview
 
-### 1. **Training Pipeline** (2.0/2.0 points)
-- ✅ **v0.1**: LinearRegression baseline (RMSE: 54.46)
-- ✅ **v0.2**: RandomForestRegressor with GridSearchCV (RMSE: 53.39, 1.96% improvement)
-- ✅ **Reproducibility**: seed=7 throughout, pinned dependencies
-- ✅ **Metrics**: JSON files with performance data and hyperparameters
+### Training Pipeline
+- **v0.1**: LinearRegression baseline (RMSE: 54.46)
+- **v0.2**: RandomForestRegressor with GridSearchCV (RMSE: 53.39, 1.96% improvement)
+- **Reproducibility**: seed=7 throughout, pinned dependencies
+- **Metrics**: JSON files with performance data and hyperparameters
 
-### 2. **Docker Image** (2.0/2.0 points)
-- ✅ **Multi-stage build** for smaller image size
-- ✅ **Self-contained** with baked-in models
-- ✅ **Health check** endpoint
-- ✅ **Fast startup** and correct port exposure (8000)
+### Docker Image
+- Multi-stage build for smaller image size
+- Self-contained with baked-in models
+- Health check endpoint
+- Fast startup and correct port exposure (8000)
 
-### 3. **API Service** (Acceptance criteria)
-- ✅ **GET /health** → `{"status":"ok", "model_version":"v0.2"}`
-- ✅ **POST /predict** → Input: diabetes features, Output: `{"prediction": <float>}`
-- ✅ **JSON error handling** for bad input
-- ✅ **FastAPI** with Pydantic validation
+### API Service
+- **GET /health** → `{"status":"ok", "model_version":"v0.2"}`
+- **POST /predict** → Input: diabetes features, Output: `{"prediction": <float>}`
+- JSON error handling for bad input
+- FastAPI with Pydantic validation
 
-### 4. **CI/CD Pipeline** (3.0/3.0 points)
-- ✅ **PR/Push workflow**: lint, tests, training, artifacts
-- ✅ **Tag workflow**: Docker build, container tests, GHCR publish, GitHub Release
-- ✅ **Automated** model training and deployment
+### CI/CD Pipeline
+- **PR/Push workflow**: lint, tests, training, artifacts
+- **Tag workflow**: Docker build, container tests, GHCR publish, GitHub Release
+- Automated model training and deployment
 
-### 5. **Documentation** (1.0/1.0 points)
-- ✅ **README.md** with exact run commands and sample payloads
-- ✅ **CHANGELOG.md** with v0.1 → v0.2 improvements and metrics
-- ✅ **Clear project structure** and instructions
+### Documentation
+- README.md with exact run commands and sample payloads
+- CHANGELOG.md with v0.1 → v0.2 improvements and metrics
+- Clear project structure and instructions
 
-### 6. **Iteration Quality** (2.0/2.0 points)
-- ✅ **Clear improvement**: RMSE 54.46 → 53.39 (1.96% better)
-- ✅ **Evidence**: Side-by-side metrics in CHANGELOG.md
-- ✅ **Rationale**: Hyperparameter tuning with GridSearchCV
+### Iteration Quality
+- Clear improvement: RMSE 54.46 → 53.39 (1.96% better)
+- Evidence: Side-by-side metrics in CHANGELOG.md
+- Rationale: Hyperparameter tuning with GridSearchCV
 
-## 🧪 Tested Features
+## Testing
 
 ### Local Testing
 ```bash
-# ✅ Training works
+# Training works
 cd src && python train_v1.py  # RMSE: 54.46
 cd src && python train_v2.py  # RMSE: 53.39
 
-# ✅ Docker builds and runs
+# Docker builds and runs
 docker build -t diabetes-clinic-triage:test .
 docker run -p 8000:8000 diabetes-clinic-triage:test
 
-# ✅ API endpoints work
+# API endpoints work
 curl http://localhost:8000/health
 # → {"status":"ok","model_version":"v0.2"}
 
@@ -84,14 +84,14 @@ diabetes-clinic-triage/
 4. **Verify GitHub Actions** run successfully
 5. **Check GHCR** for published images
 
-## 📊 Performance Metrics
+## Performance Metrics
 
 | Version | Model | RMSE | Improvement | Best Params |
 |---------|-------|------|-------------|-------------|
 | v0.1 | LinearRegression | 54.46 | Baseline | N/A |
 | v0.2 | RandomForestRegressor | 53.39 | 1.96% better | n_estimators=500, max_depth=None, max_features="sqrt" |
 
-## ✨ Key Features
+## Key Features
 
 - **Reproducible**: Same seed (7) everywhere
 - **Portable**: Self-contained Docker image
