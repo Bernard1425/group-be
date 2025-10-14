@@ -1,0 +1,25 @@
+{
+  "version": "v0.2",
+  "model_type": "RandomForestRegressor",
+  "rmse": 53.39092962323235,
+  "test_size": 89,
+  "features": [
+    "age",
+    "sex",
+    "bmi",
+    "bp",
+    "s1",
+    "s2",
+    "s3",
+    "s4",
+    "s5",
+    "s6"
+  ],
+  "best_params": {
+    "max_depth": null,
+    "max_features": "sqrt",
+    "min_samples_leaf": 4,
+    "min_samples_split": 10,
+    "n_estimators": 500
+  }
+}
