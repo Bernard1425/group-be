@@ -53,7 +53,8 @@ curl -X POST http://localhost:8000/predict \
 
 **Response:**
 ```json
-{"prediction": 152.3}
+{"prediction": 241.41887258493662} // for v0.2.1 tag (LinearRegression)
+{"prediction": 196.418030113093}   // for v0.2.2 tag (RandomForest)
 ```
 
 ## Local Development
