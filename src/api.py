@@ -9,7 +9,7 @@ from typing import Dict
 app = FastAPI(title="Diabetes Clinic Triage API", version="0.1.0")
 
 # Load model and scaler at startup
-MODEL_VERSION = os.getenv("MODEL_VERSION", "v0.1")
+MODEL_VERSION = os.getenv("MODEL_VERSION", "v0.2")
 model = joblib.load(f'/app/models/model_{MODEL_VERSION}.pkl')
 scaler = joblib.load(f'/app/models/scaler_{MODEL_VERSION}.pkl')
 
