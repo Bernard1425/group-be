@@ -57,6 +57,8 @@ curl -X POST http://localhost:8000/predict \
 {"prediction": 196.418030113093}   // for v0.2.2 tag (RandomForest)
 ```
 
+**Why v0.2 is Better:** RandomForest handles non-linear relationships and feature interactions better than linear models, resulting in 1.96% RMSE improvement (54.46 → 53.39).
+
 ## Local Development
 
 ### Prerequisites
