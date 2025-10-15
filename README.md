@@ -7,13 +7,13 @@ A machine learning service that predicts diabetes progression risk to help nurse
 ### Pull and Run Docker Image
 
 ```bash
-# Pull v0.1 (LinearRegression baseline)
-docker pull ghcr.io/bernard1425/group-be:v0.1
-docker run -p 8000:8000 ghcr.io/bernard1425/group-be:v0.1
+# Pull v0.2.1 (contains v0.1 LinearRegression baseline)
+docker pull ghcr.io/bernard1425/group-be:v0.2.1
+docker run -p 8000:8000 ghcr.io/bernard1425/group-be:v0.2.1
 
-# Pull v0.2 (RandomForest improved)
-docker pull ghcr.io/bernard1425/group-be:v0.2
-docker run -p 8000:8000 ghcr.io/bernard1425/group-be:v0.2
+# Pull v0.2.2 (contains v0.2 RandomForest improved) - when available
+docker pull ghcr.io/bernard1425/group-be:v0.2.2
+docker run -p 8000:8000 ghcr.io/bernard1425/group-be:v0.2.2
 
 # Pull latest version
 docker pull ghcr.io/bernard1425/group-be:latest
@@ -29,8 +29,8 @@ curl http://localhost:8000/health
 
 **Response:**
 ```json
-{"status": "ok", "model_version": "v0.1"} // for v0.1 image
-{"status": "ok", "model_version": "v0.2"} // for v0.2 image
+{"status": "ok", "model_version": "v0.1"} // for v0.2.1 tag (LinearRegression)
+{"status": "ok", "model_version": "v0.2"} // for v0.2.2 tag (RandomForest)
 ```
 
 **Make Prediction:**
